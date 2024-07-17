@@ -5,6 +5,8 @@ import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell} from "@
 import WeatherDisplay from "@/components/ForeCast";
 import BarChartF from "@/components/BarChart";
 import DefaultLayout from "@/layouts/default";
+import CurrentWeather from "@/components/CurrentWeather";
+import WeatherDetails from "@/components/WeatherDetails";
 
 function Home({city,setCity}:any){
     const api=siteConfig.api1.url
@@ -16,9 +18,10 @@ function Home({city,setCity}:any){
           .then(data => setWeather(data));
       }, [city, api, apiKey]);
     return(
-        <DefaultLayout city={city setCity={setCity}}>
+        <DefaultLayout city={city} setCity={setCity}>
             <div>
-            
+                <CurrentWeather weather={weather}/>
+                <WeatherDetails weather={weather}/>
             </div>
         
         </DefaultLayout>
