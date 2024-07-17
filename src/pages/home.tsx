@@ -7,6 +7,7 @@ import BarChartF from "@/components/BarChart";
 import DefaultLayout from "@/layouts/default";
 import CurrentWeather from "@/components/CurrentWeather";
 import WeatherDetails from "@/components/WeatherDetails";
+import ForeCast from "@/components/ForeCast";
 
 function Home({city,setCity}:any){
     const api=siteConfig.api1.url
@@ -21,7 +22,10 @@ function Home({city,setCity}:any){
         <DefaultLayout city={city} setCity={setCity}>
             <div>
                 <CurrentWeather weather={weather}/>
+                <Spacer y={5}/>
                 <WeatherDetails weather={weather}/>
+                <Spacer y={5}/>
+                <ForeCast city={city}/>
             </div>
         
         </DefaultLayout>

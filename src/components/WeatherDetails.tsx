@@ -1,10 +1,14 @@
+//@ts-nocheck
 import { useEffect } from "react";
 import {Card, CardHeader, CardBody,Divider,Image,Spacer} from "@nextui-org/react";
 
 const WeatherDetails = ({weather})=>{
     return(
         <div>
-            <Card className="w-full p-4">
+
+            <Card className="w-full p-4 flex">
+                <CardHeader className="justify-center text-xl font-bold">Weather Today</CardHeader>
+                <Divider></Divider>
                 <CardBody>
                     <div className="flex flex-col">
                         <div className="flex justify-between">
