@@ -17,12 +17,12 @@ export const siteConfig = {
   ],
   api1:
     {
-      url:"http://api.weatherapi.com/v1/current.json?key=",
+      url:"https://api.weatherapi.com/v1/current.json?key=",
       key:"3a74ab3236084201b3b115352240406"
     },
     api2:
       {
-        url:"http://api.weatherapi.com/v1/forecast.json?key=",
+        url:"https://api.weatherapi.com/v1/forecast.json?key=",
         key:"3a74ab3236084201b3b115352240406"
       },
     api3:
@@ -36,7 +36,7 @@ export const siteConfig = {
       },
       api5:
         {
-          url:"http://api.openweathermap.org/geo/1.0/reverse"
+          url:"https://api.openweathermap.org/geo/1.0/reverse"
         },
   links: {
     github: "https://github.com/nextui-org/nextui",
