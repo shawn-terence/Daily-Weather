@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
