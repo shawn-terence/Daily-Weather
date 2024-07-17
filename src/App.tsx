@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-
+import { useState,useEffect } from "react";
 import IndexPage from "@/pages/index";
 import DocsPage from "@/pages/docs";
 import PricingPage from "@/pages/pricing";
@@ -8,13 +8,10 @@ import AboutPage from "@/pages/about";
 import Home from "./pages/home";
 
 function App() {
+  const [city,setCity]=useState("nairobi")
   return (
     <Routes>
-      <Route element={<Home />} path="/" />
-      <Route element={<DocsPage />} path="/docs" />
-      <Route element={<PricingPage />} path="/pricing" />
-      <Route element={<BlogPage />} path="/blog" />
-      <Route element={<AboutPage />} path="/about" />
+      <Route element={<Home city={city} setCity={setCity}/>} path="/" />
     </Routes>
   );
 }

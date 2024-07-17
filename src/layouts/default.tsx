@@ -2,14 +2,14 @@ import { Link } from "@nextui-org/link";
 
 import { Navbar } from "@/components/navbar";
 
-export default function DefaultLayout({
+export default function DefaultLayout({ city,setCity,
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <div className="relative flex flex-col h-screen">
-      <Navbar />
+      <Navbar city={city} setCity={setCity}/>
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         {children}
       </main>

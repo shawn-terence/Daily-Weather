@@ -25,8 +25,17 @@ import {
   SearchIcon,
 } from "@/components/icons";
 import { Logo } from "@/components/icons";
+import { useState } from "react";
 
-export const Navbar = () => {
+export const Navbar = ({city,setCity}) => {
+  const [search,setSearch]=useState(city)
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSearchSubmit = () => {
+    setCity(search);
+  };
   const searchInput = (
     <Input
       aria-label="Search"
@@ -41,6 +50,10 @@ export const Navbar = () => {
       }
       type="search"
       className="w-96"
+      onChange={handleSearchChange}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") handleSearchSubmit();
+      }}
     />
   );
 
