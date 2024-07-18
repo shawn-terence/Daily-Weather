@@ -8,6 +8,7 @@ import BlogPage from "@/pages/blog";
 import AboutPage from "@/pages/about";
 import Home from "./pages/home";
 import axios from "axios";
+import All from "@/styles/All.css"
 
 function App() {
   const [city,setCity]=useState("nairobi")
