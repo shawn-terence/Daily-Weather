@@ -5,7 +5,6 @@ import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
 import { Image } from "@nextui-org/react";
-import "@/styles/All.css"
 import {
   Navbar as NextUINavbar,
   NavbarBrand,
