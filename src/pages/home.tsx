@@ -19,6 +19,7 @@ function Home({city,setCity}:any){
           .then(res => res.json())
           .then(data => setWeather(data));
       }, [city, api, apiKey]);
+      
     return(
         <DefaultLayout city={city} setCity={setCity}>
             <div>
