@@ -51,13 +51,13 @@ const CurrentWeather = ({ weather }) => {
 
     return (
         <div>
-            <Card id="Current-sm">
-                <CardHeader id="Location">
-                    <h1 className="lg:text-xl sm:text-base font-bold">{weather?.location.name}</h1>
-                    <p className="pl-1 lg:text-large font-bold text-sm">as of {weather?.current.last_updated}</p>
+            <Card id="Current-sm" className="px-5 md:px-6">
+                <CardHeader id="Location" className="flex gap-2 lg:gap-3 py-5">
+                    <h1 className="lg:text-xl text-base font-semibold uppercase">{weather?.location.name}</h1>
+                    <p className="pl-1 lg:text-large font-semibold text-gray-500">as of {weather?.current.last_updated}</p>
                 </CardHeader>
                 <Divider />
-                <CardBody id="Current-M" className="flex flex-row">
+                <CardBody id="Current-M" className="flex flex-row py-6 md:pb-10 md:pt-8">
                     <div id="Current-m1" className="flex-1">
                         <p className="lg:text-9xl md:text-9xl font-bold text-7xl">{weather?.current.temp_c}<span>°</span></p>
                         <p className="lg:text-2xl md:text-xl text-base">{weather?.current.condition.text}</p>
